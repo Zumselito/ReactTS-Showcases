@@ -1,4 +1,7 @@
-FROM mcr.microsoft.com/devcontainers/base:noble AS development
+# FROM mcr.microsoft.com/devcontainers/javascript-node:22-bookworm
+# FROM mcr.microsoft.com/devcontainers/base:noble AS development
+FROM node:22.14-bookworm AS development
+WORKDIR /workspaces/frontend
 RUN apt-get update
 
 # # --- STAGE 2: Build ---

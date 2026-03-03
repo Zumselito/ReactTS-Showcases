@@ -1,13 +1,8 @@
 {
-	"name": "ReactTS-App",
+	"name": "ReactTS",
   "dockerComposeFile": "docker-compose.yml",
   "service": "frontend",
   "workspaceFolder": "/workspaces",
-  "features": {
-    "ghcr.io/stu-bell/devcontainer-features/node:0": {
-      "version": "latest"
-    }
-  },
   "forwardPorts": [3000],
   "customizations": {
     "vscode": {
@@ -18,6 +13,6 @@
       ]
     }
   },
-  "waitFor": "postCreateCommand",
-  "postStartCommand": "npm run dev --prefix frontend"
+  "remoteUser": "node",
+  "containerUser": "node"
 }
