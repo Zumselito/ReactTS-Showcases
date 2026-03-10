@@ -1,15 +1,21 @@
 {
 	"name": "ReactTS-Showcases",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "base",
-  "workspaceFolder": "/workspaces",
-  "forwardPorts": [5173],
+  "service": "default-react-ts-tw",
+  "workspaceFolder": "/workspaces/ReactTS-Showcases",
+  "forwardPorts": [5173, 5174, 5175, 5176, 5177, 5178, 5179, 5180],
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "ms-azuretools.vscode-containers"
+        "ms-azuretools.vscode-containers",
+        "bradlc.vscode-tailwindcss"
       ]
     }
   }

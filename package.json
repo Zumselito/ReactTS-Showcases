@@ -1,0 +1,15 @@
+{
+  "name": "reactts-showcases",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "dev:default": "pnpm --filter default-react-ts-tw dev",
+    "dev:notes": "pnpm --filter notes-app-1 dev",
+    "dev:tasks": "pnpm --filter tasks-app-1 dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^6.0.0"
+  }
+}

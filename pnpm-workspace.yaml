@@ -1,0 +1,8 @@
+packages:
+  - '*'
+  # - 'notes-app-1'
+  # - 'tasks-app-1'
+  # - 'default-react-tailwind'
+allowBuilds:
+  '@swc/core': false
+  esbuild: false

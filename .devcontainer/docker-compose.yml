@@ -1,15 +1,25 @@
 services:
-  base:
+  default-react-ts-tw:
     build:
-      context: ../base
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: default-react-ts-tw/Dockerfile
     volumes:
-      - ..:/workspaces:cached
+      - ..:/workspaces/ReactTS-Showcases:cached
+      - /workspaces/ReactTS-Showcases/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
-  note-app-1:
+  notes-app-1:
     build:
-      context: ../note-app-1
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: notes-app-1/Dockerfile
     volumes:
-      - ../note-app-1:/workspaces/note-app-1:cached
+      - ..:/workspaces/ReactTS-Showcases:cached
+      - /workspaces/ReactTS-Showcases/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  tasks-app-1:
+    build:
+      context: ..
+      dockerfile: tasks-app-1/Dockerfile
+    volumes:
+      - ..:/workspaces/ReactTS-Showcases:cached
+      - /workspaces/ReactTS-Showcases/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
