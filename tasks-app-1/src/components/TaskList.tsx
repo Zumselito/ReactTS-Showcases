@@ -3,25 +3,25 @@ import Task from "./Task";
 import type { TaskType } from "../types/task";
 
 interface TaskListProps {
-  tasks: TaskType[];
+  t: TaskType[];
   onCompleteChange: (id: number, completed: boolean) => void;
   onDelete: (id: number) => void;
 }
 
 export default function TaskList({
-  tasks,
+  t,
   onCompleteChange,
   onDelete
 }: TaskListProps) {
   
   const tasksSorted = useMemo(() => {
-    return [...tasks].sort((a, b) => {
+    return [...t].sort((a, b) => {
       if (a.completed === b.completed) {
         return b.id - a.id;
       }
       return a.completed ? 1 : -1;
     });
-  }, [tasks]);
+  }, [t]);
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function TaskList({
           />
         ))}
       </div>
-      {tasks.length === 0 && (
+      {t.length === 0 && (
         <p className="text-center text-sm text-gray-500">
           Feierabend, keine Aufgaben vorhanden.
         </p>

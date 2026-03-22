@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
       fs: {
         allow: ['../..']
       }
-    }
+    },
+    base: '/react-ts-tw-tasks-app-showcase/'
   }
 })

@@ -3,10 +3,20 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "default-react-ts-tw",
   "workspaceFolder": "/workspaces/ReactTS-Showcases",
-  "forwardPorts": [5173, 5174, 5175, 5176, 5177, 5178, 5179, 5180],
+  "forwardPorts": [
+    5173, // default-react-ts-tw
+    5174, // notes-app-1
+    5175, // tasks-app-1
+    5176, // footballer-app-1
+    5177, // tic-tac-toe-app-1
+    5178,
+    5179,
+    5180 // tests-app-1
+  ],
   "features": {
     "ghcr.io/devcontainers/features/git:1": {
-      "version": "latest"
+      "version": "latest",
+      "pnpmVersion": "latest"
     }
   },
   "customizations": {
@@ -18,5 +28,9 @@
         "bradlc.vscode-tailwindcss"
       ]
     }
-  }
+  },
+  "remoteEnv": {
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+  "postCreateCommand": "corepack enable && pnpm install"
 }

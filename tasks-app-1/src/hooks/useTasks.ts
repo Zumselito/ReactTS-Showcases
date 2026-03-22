@@ -4,7 +4,7 @@ import { dummyTasks } from "../data/tasks";
 
 export default function useTasks() {
   const [tasks, setTasks] = useState(() => {
-    const savedTasks:TaskType[] = JSON.parse(localStorage.getItem("tasks") || "[]");
+    const savedTasks:TaskType[] = JSON.parse(localStorage.getItem("tasks") || "[]") as TaskType[]
     return savedTasks.length > 0 ? savedTasks : dummyTasks;
   });
 
@@ -34,7 +34,7 @@ export default function useTasks() {
   }
 
   function deleteAllCompletedTasks() {
-    setTasks(prevTasks => prevTasks.filter(t => !t.completed));
+    setTasks(prevTasks => prevTasks.filter(t => !t.completed))
   }
 
   return {

@@ -7,6 +7,7 @@ services:
       - ..:/workspaces/ReactTS-Showcases:cached
       - /workspaces/ReactTS-Showcases/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
+
   notes-app-1:
     build:
       context: ..
@@ -15,10 +16,38 @@ services:
       - ..:/workspaces/ReactTS-Showcases:cached
       - /workspaces/ReactTS-Showcases/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
+
   tasks-app-1:
     build:
       context: ..
       dockerfile: tasks-app-1/Dockerfile
+    volumes:
+      - ..:/workspaces/ReactTS-Showcases:cached
+      - /workspaces/ReactTS-Showcases/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  footballer-app-1:
+    build:
+      context: ..
+      dockerfile: footballer-app-1/Dockerfile
+    volumes:
+      - ..:/workspaces/ReactTS-Showcases:cached
+      - /workspaces/ReactTS-Showcases/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  tic-tac-toe-app-1:
+    build:
+      context: ..
+      dockerfile: tic-tac-toe-app-1/Dockerfile
+    volumes:
+      - ..:/workspaces/ReactTS-Showcases:cached
+      - /workspaces/ReactTS-Showcases/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  tests-app-1:
+    build:
+      context: ..
+      dockerfile: tests-app-1/Dockerfile
     volumes:
       - ..:/workspaces/ReactTS-Showcases:cached
       - /workspaces/ReactTS-Showcases/node_modules
