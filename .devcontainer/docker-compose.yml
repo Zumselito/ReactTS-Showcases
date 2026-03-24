@@ -29,7 +29,7 @@ services:
   footballer-app-1:
     build:
       context: ..
-      dockerfile: footballer-app-1/Dockerfile
+      dockerfile: football-app-1/Dockerfile
     volumes:
       - ..:/workspaces/ReactTS-Showcases:cached
       - /workspaces/ReactTS-Showcases/node_modules
