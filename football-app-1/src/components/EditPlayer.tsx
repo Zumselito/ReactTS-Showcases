@@ -17,7 +17,7 @@ const EditPlayer: React.FC<EditPlayerProps> = ({ players, onUpdate }) => {
   const [firstName, setFirstName] = useState(playerToEdit?.firstName || '')
   const [lastName, setLastName] = useState(playerToEdit?.lastName || '')
   const [position, setPosition] = useState<PositionType | ''>(playerToEdit?.position || '')
-  const [shotPowerHead, setShotPowerHead] = useState<number>(50)
+  const [shotPowerHead, setShotPowerHead] = useState<number>(playerToEdit?.shotPowerHead || 50)
   const [shotPowerRight, setShotPowerRight] = useState<number>(playerToEdit?.shotPowerRight || 50)
   const [shotPowerLeft, setShotPowerLeft] = useState<number>(playerToEdit?.shotPowerLeft || 50)
 

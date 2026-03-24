@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
       fs: {
         allow: ['../..']
       }
-    }
+    },
+    base: '/react-ts-tw-football-app-showcase/'
   }
 })
