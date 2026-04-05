@@ -6,7 +6,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/react-ts-tw-football-app-showcase">
       <App />
     </BrowserRouter>
   </StrictMode>,
